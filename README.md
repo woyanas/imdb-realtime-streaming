@@ -126,7 +126,9 @@ sequenceDiagram
 
 ## 🎥 Demo
 
-*(Placeholder: Edit and replace this with a `.gif` or link pointing to a video of your animated dashboard!)*
+![Dashboard Demo](demo.gif)
+
+Also available as video formats: [demo.mp4](demo.mp4) | [demo.webm](demo.webm)
 
 ## 🧹 Clean Restart & Teardown
 
