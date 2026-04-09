@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f0f4ff;
+  --bg-white: #ffffff;
+  --bg-soft: #f8faff;
+  --positive: #059669;
+  --positive-light: #ecfdf5;
+  --positive-mid: #d1fae5;
+  --negative: #dc2626;
+  --negative-light: #fff1f2;
+  --negative-mid: #ffe4e6;
+  --accent: #4f46e5;
+  --accent-light: #eef2ff;
+  --accent-mid: #c7d2fe;
+  --yellow: #d97706;
+  --yellow-light: #fffbeb;
+  --purple: #7c3aed;
+  --purple-light: #f5f3ff;
+  --border: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+  --shadow-lg: 0 10px 40px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.05);
+  --radius: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(160deg, #f0f4ff 0%, #fdf4ff 40%, #fff7f0 100%);
+}
+
+/* ─── HEADER ───────────────────────────────────────────── */
+.app-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 12px rgba(79,70,229,0.07);
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 12px rgba(79,70,229,0.3);
+  flex-shrink: 0;
+}
+
+.brand-text h1 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.4px;
+}
+
+.brand-text p {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tech-pill {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent-mid);
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.connection-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: 1.5px solid transparent;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+.connection-badge.connected {
+  background: var(--positive-light);
+  border-color: #a7f3d0;
+  color: var(--positive);
+}
+.connection-badge.disconnected {
+  background: var(--yellow-light);
+  border-color: #fde68a;
+  color: var(--yellow);
+}
+.connection-badge.error {
+  background: var(--negative-light);
+  border-color: #fecdd3;
+  color: var(--negative);
+}
+
+.conn-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.conn-dot.pulse { animation: connPulse 1.5s infinite; }
+@keyframes connPulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:0.4; transform:scale(0.7); }
+}
+
+/* ─── MAIN ─────────────────────────────────────────────── */
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ─── FOOTER ───────────────────────────────────────────── */
+.app-footer {
+  background: rgba(255,255,255,0.7);
+  border-top: 1px solid var(--border);
+  padding: 14px 2rem;
+  text-align: center;
+}
+.app-footer p {
+  font-size: 0.73rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.app-footer span {
+  color: var(--accent);
+  font-weight: 600;
+}
