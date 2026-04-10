@@ -123,11 +123,6 @@ sequenceDiagram
  ┣ 📂 4-frontend-dashboard    # React + Vite Application
  ┗ 📜 docker-compose.yml      # The central orchestrator file tying the stack together
 ```
-
-## 🎥 Demo
-
-<video src="imdb-realtime.mp4" width="100%" controls autoplay loop muted></video>
-
 ## 🧹 Clean Restart & Teardown
 
 If you want to completely destroy the environment, wipe all data/topics, and start fresh (for instance, to test how the dashboard resets or behaves with an empty database):
