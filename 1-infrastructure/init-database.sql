@@ -1,8 +1,4 @@
--- Create database
-CREATE DATABASE imdb_reviews;
-
--- Connect to the database
-\c imdb_reviews;
+-- Note: Database is created by docker-entrypoint via POSTGRES_DB env var
 
 -- Create movie_reviews table
 CREATE TABLE movie_reviews (

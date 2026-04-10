@@ -126,7 +126,7 @@ sequenceDiagram
 
 ## 🎥 Demo
 
-*(Placeholder: Edit and replace this with a `.gif` or link pointing to a video of your animated dashboard!)*
+<video src="imdb-realtime.mp4" width="100%" controls autoplay loop muted></video>
 
 ## 🧹 Clean Restart & Teardown
 
